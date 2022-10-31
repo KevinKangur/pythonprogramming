@@ -1,13 +1,11 @@
 nimi = input("Sisestage oma nimi: ")
 
-print("Tere, " + nimi + "!")
+print("Tere,", nimi + "!")
 
 koht = input("Sisestage oma elukoht: ")
 
-if koht == "Saaremaa":
+if koht.lower() == "saaremaa":
     print("Ikka üks kena saarlane!")
-else:
-    print("Elukoht: " + koht)
 
 vanus = int(input("Sisestage oma vanus: "))
 
