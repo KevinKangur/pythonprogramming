@@ -6,7 +6,9 @@ if pet.lower() == "koer":
 else:
     print(pet[0])
 
-petlist = ["Hamster", "Kuldkala", "Hiir", pet]
+petlist = ["Hamster", "Kuldkala", "Hiir"]
+
+petlist.append(pet)
 
 print(petlist)
-print(pet[-1])
+print(petlist[-1][-1])
