@@ -1,35 +1,35 @@
-mina = {
-    'eesnimi': 'Kevin',
-    'perenimi': 'Kangur',
-    'sünniaasta': '2005',
-    'elukoht': 'Laoküla',
-    'lemmik magustoit': 'riisi puder kisseliga'
+about_me = {
+    'first_name': 'Kevin',
+    'last_name': 'Kangur',
+    'date_of_birth': '2005',
+    'home': 'Laoküla',
+    'favorite_dessert': 'riisi puder kisseliga'
 }
 
-print(mina.get('elukoht'))
-print(mina['elukoht'])
+print(about_me.get('home'))
+print(about_me['home'])
 
-mina['lemmik magustoit'] = 'tarretis'
+about_me['favorite_dessert'] = 'tarretis'
 
-for k, v in mina.items():
+for k, v in about_me.items():
     print(k, v)
 
-if 'isikukood' in mina:
+if 'id_code' in about_me:
     print('isikukood on olemas')
 else:
     print('isikukood puudub')
 
-print(len(mina))
+print(len(about_me))
 
-mina['pikkus'] = '180 cm'
-print(mina)
+about_me['height'] = '180 cm'
+print(about_me)
 
-#print(mina.pop('sünniaasta'))
-del mina['sünniaasta']
-print(mina)
+#print(mina.pop('date_of_birth'))
+del about_me['date_of_birth']
+print(about_me)
 
-mina.clear()
-print(mina)
+about_me.clear()
+print(about_me)
 
-del mina
-print(mina)
+del about_me
+print(about_me)
