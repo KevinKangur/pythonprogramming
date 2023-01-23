@@ -3,7 +3,7 @@ sales_results = {
         'revenue': {
             'tea': 190,
             'coffee': 325,
-            'water': 625,
+            'water': 682,
             'milk': 829,
         },
         'expenses': {
@@ -31,7 +31,7 @@ sales_results = {
 
     'Danbree': {
         'revenue': {
-            'tea': 1956,
+            'tea': 1926,
             'coffee': 293,
             'water': 852,
             'milk': 609,
@@ -74,3 +74,16 @@ sales_results = {
         }
     },
 }
+
+for employee_name, employee_sales in sales_results.items():
+    print(employee_name)
+    
+    comission = 0
+    for drink_name, drink_value in employee_sales['revenue'].items():
+        profit = drink_value - employee_sales['expenses'][drink_name]
+        print(drink_name, profit)
+        if profit > 0:
+            print('Kasum on positiivne', profit * 0.062)
+            comission += profit * 0.062
+    
+    print(int(comission))
