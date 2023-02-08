@@ -2,31 +2,31 @@ import random
 
 while True:
 
-    valik = input('Vali kas kivi, paber või käärid: ').lower()
+    user_choice = input('Vali kas kivi, paber või käärid: ').lower()
 
-    kpk = ['kivi', 'paber', 'käärid']
-    valikrandom = random.choice(kpk)
+    choices = ['kivi', 'paber', 'käärid']
+    computer_choice = random.choice(choices)
 
-    print(f"Sina valisid {valik}, arvuti valis {valikrandom}.")
+    print(f"Sina valisid {user_choice}, arvuti valis {computer_choice}.")
 
-    if valik == valikrandom:
-        print(f"Mõlemad valisid {valik}. Viik!")
-    elif valik == "kivi":
-        if valikrandom == "käärid":
+    if user_choice == computer_choice:
+        print(f"Mõlemad valisid {user_choice}. Viik!")
+    elif user_choice == "kivi":
+        if computer_choice == "käärid":
             print("Kivi võidab kääre! Sa võitsid!")
         else:
             print("Paber võidab kivi! Sa kaotasid.")
-    elif valik == "paber":
-        if valikrandom == "kivi":
+    elif user_choice == "paber":
+        if computer_choice == "kivi":
             print("Paber võidab kivi! Sa võitsid!")
         else:
             print("Käärid võidab paberit! Sa kaotasid.")
-    elif valik == "käärid":
-        if valikrandom == "paber":
+    elif user_choice == "käärid":
+        if computer_choice == "paber":
             print("Käärid võidab paberit! Sa võitsid!")
         else:
             print("Kivi võidab kääre! Sa kaotasid.")
 
-    mängiuuesti = input("Mängi uuesti? (jah/ei): ")
-    if mängiuuesti.lower() != "jah":
+    play_again = input("Mängi uuesti? (jah/ei): ")
+    if play_again.lower() != "jah":
         break
