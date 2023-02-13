@@ -2,10 +2,14 @@ import random
 
 while True:
 
-    user_choice = input('Vali kas kivi, paber või käärid: ').lower()
+    user_choice = input('Vali kas kivi, paber või käärid (vali lõpeta kui tahad lõpetada mängimist): ').lower()
 
     choices = ['kivi', 'paber', 'käärid']
     computer_choice = random.choice(choices)
+
+    if user_choice == "lõpeta":
+        print("Tänan mängimast!")
+        break
 
     print(f"Sina valisid {user_choice}, arvuti valis {computer_choice}.")
 
@@ -26,7 +30,3 @@ while True:
             print("Käärid võidab paberit! Sa võitsid!")
         else:
             print("Kivi võidab kääre! Sa kaotasid.")
-
-    play_again = input("Mängi uuesti? (jah/ei): ")
-    if play_again.lower() != "jah":
-        break

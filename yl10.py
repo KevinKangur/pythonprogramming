@@ -1,17 +1,17 @@
-nimi = input("Sisestage oma nimi: ")
+name = input("Sisestage oma nimi: ")
 
-print("Tere,", nimi + "!")
+print("Tere,", name + "!")
 
-koht = input("Sisestage oma elukoht: ")
+home = input("Sisestage oma elukoht: ")
 
-if koht.lower() == "saaremaa":
+if home.lower() == "saaremaa":
     print("Ikka üks kena saarlane!")
 
-vanus = int(input("Sisestage oma vanus: "))
+age = int(input("Sisestage oma vanus: "))
 
-if vanus < 18:
+if age < 18:
     print("Kasutaja on liiga noor.")
-elif vanus == 18:
+elif age == 18:
     print("Palju õnne täisealiseks saamise puhul!")
 else:
     print("Kasutaja võib autot juhtida.")

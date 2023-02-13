@@ -9,8 +9,8 @@ while randomnumber != guess:
     guess = int(input('Paku arvu: '))
 
     if randomnumber > guess:
-        print('Paku suurem arv: ')
+        print('Paku suurem arv. ')
     elif randomnumber < guess:
-        print('Paku väiksem arv: ')
+        print('Paku väiksem arv. ')
     elif randomnumber == guess:
         print('Õige!')
