@@ -15,18 +15,11 @@ while True:
 
     if user_choice == computer_choice:
         print(f"Mõlemad valisid {user_choice}. Viik!")
-    elif user_choice == "kivi":
-        if computer_choice == "käärid":
-            print("Kivi võidab kääre! Sa võitsid!")
-        else:
-            print("Paber võidab kivi! Sa kaotasid.")
-    elif user_choice == "paber":
-        if computer_choice == "kivi":
-            print("Paber võidab kivi! Sa võitsid!")
-        else:
-            print("Käärid võidab paberit! Sa kaotasid.")
-    elif user_choice == "käärid":
-        if computer_choice == "paber":
-            print("Käärid võidab paberit! Sa võitsid!")
-        else:
-            print("Kivi võidab kääre! Sa kaotasid.")
+    elif user_choice == "kivi" and computer_choice == "käärid":
+        print("Kivi võidab kääre! Sa võitsid!")
+    elif user_choice == "paber" and computer_choice == "kivi":
+        print("Paber võidab kivi! Sa võitsid!")
+    elif user_choice == "käärid" and computer_choice == "paber":
+        print("Käärid võidab paberit! Sa võitsid!")
+    else:
+        print("Sa kaotasid.")
